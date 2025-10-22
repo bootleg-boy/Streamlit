@@ -9,7 +9,7 @@ df = pd.read_excel("KDp.xlsx")
 for col in ['Price', 'Invested', 'P/L']:
     df[col] = df[col].replace('[₹,]', '', regex=True).astype(float)
 
-st.title("Stock Portfolio Dashboard")
+st.title("Kalpesh's NIFTY Portfolio Dashboard")
 
 # 1. P/L by Stock (bar chart)
 pl_chart = alt.Chart(df).mark_bar().encode(
